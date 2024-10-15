@@ -1,0 +1,49 @@
+/* Ensure modal covers the entire screen and is centered */
+.modal {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Modal content box */
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 40vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal footer button links */
+.modal-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px !important;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Blurring and disabling interaction for background */
+body.modal-active .sidebar,
+body.modal-active .board {
+    filter: blur(1.1px);
+    pointer-events: none;
+}
+
+
+.modal-footer a {
+    min-width: 80% !important;
+}

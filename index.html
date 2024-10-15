@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudoku Hub</title>
+  <link rel="stylesheet" href="./styles/index-board.css">
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./styles/buttons.css">
+</head>
+<body>
+  <header class="header-container">
+    <h1>Welcome to Sudoku Hub</h1>
+  </header>
+  <main class="container">
+    <section class="background-blur" aria-hidden="true">
+      <div id="sudoku-board" class="board-container">
+        
+        <div class="sub-grid">
+        <input type="text" value="5" class="prefilled" readonly>
+        <input type="text" value="3" class="correct" readonly>
+        <input type="text" readonly>
+        <input type="text" value="6" class="prefilled" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" value="8" class="correct" readonly>
+        <input type="text" value="4" class="prefilled" readonly>
+        </div>
+
+        <div class="sub-grid">
+        <input type="text" readonly>
+        <input type="text" value="7" class="prefilled" readonly>
+        <input type="text" readonly>
+        <input type="text" value="1" class="correct" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" value="9" class="prefilled" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        </div>
+        
+        <div class="sub-grid">
+        <input type="text" value="2" class="correct" readonly>
+        <input type="text" readonly>
+        <input type="text" value="8" class="prefilled" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" value="6" class="prefilled" readonly>
+        <input type="text" readonly>
+        </div>
+
+        <div class="sub-grid">
+        <input type="text" value="8" class="prefilled" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" value="6" class="correct" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" value="8" class="incorrect" readonly>
+        <input type="text" value="3" class="prefilled" readonly>
+        </div>
+
+        <div class="sub-grid">
+        <input type="text" value="4" class="prefilled" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" value="8" class="prefilled" readonly>
+        <input type="text" readonly>
+        <input type="text" value="3" class="prefilled" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" value="1" class="prefilled" readonly>
+        </div>
+
+        <div class="sub-grid">
+        <input type="text" value="7" class="prefilled" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" value="2" class="correct" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" value="6" class="prefilled" readonly>
+        </div>
+        
+        <div class="sub-grid">
+        <input type="text" readonly>
+        <input type="text" value="7" class="prefilled" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" value="2" class="prefilled" readonly>
+        <input type="text" readonly>
+        <input type="text" value="8" class="correct" readonly>
+        </div>
+        
+        <div class="sub-grid">
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" value="4" class="prefilled" readonly>
+        <input type="text" readonly>
+        <input type="text" value="1" class="correct" readonly>
+        <input type="text" value="9" class="prefilled" readonly>
+        <input type="text" readonly>
+        <input type="text" value="5" class="prefilled" readonly>
+        <input type="text" readonly>
+        </div>
+        
+        <div class="sub-grid">
+        <input type="text" value="3" class="prefilled" readonly>
+        <input type="text" value="1" class="prefilled" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" readonly>
+        <input type="text" value="5" class="prefilled" readonly>
+        <input type="text" value="9" class="correct" readonly>
+        <input type="text" readonly>
+        <input type="text" value="7" class="prefilled" readonly>
+        </div>
+    </div>
+    
+    
+    </section>
+    <section class="option-container" aria-labelledby="option-heading">
+      <h1 id="option-heading">Choose an Option Below:</h1>
+      <ul class="options">
+        <li>
+          <a href="./srcFiles/generate-solution.html" class="button-link">Generate a Sudoku Solution</a>
+        </li>
+        <li>
+          <a href="./srcFiles/solve-puzzle.html" class="button-link">Solve a Sudoku Puzzle</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

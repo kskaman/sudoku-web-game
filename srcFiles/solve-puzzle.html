@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solve Sudoku Puzzle</title>
+    <link rel="stylesheet" href="../styles/puzzle-page.css">
+    <link rel="stylesheet" href="../styles/board.css">
+    <link rel="stylesheet" href="../styles/buttons.css">
+    <link rel="stylesheet" href="../styles/difficulty-modal.css">
+</head>
+<body>
+    <!-- Difficulty Modal -->
+    <div class="modal" id="difficulty-modal">
+        <div class="modal-content">
+            <h2>Select Difficulty Level</h2>
+            <div class="difficulty-buttons">
+                <button class="button-link" onclick="setDifficulty('easy')">Easy</button>
+                <button class="button-link" onclick="setDifficulty('medium')">Medium</button>
+                <button class="button-link" onclick="setDifficulty('hard')">Hard</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Sidebar section -->
+    <aside class="sidebar">
+        <a href="../index.html" class="button-link">Home</a>
+        <h2>Instructions</h2>
+        <div>
+        <p>1. Some boxes are pre-filled. Fill in the empty boxes with the correct numbers.</p>
+        <p>2. If you enter the right number, the background and the number will turn light green.</p> 
+        <p>3. If the number is wrong, the background and the number  will turn light red.</p>
+        </div>
+    </aside>
+    
+    <div class="board-container">
+        <div>
+        <a class="button-link">Reset</a>
+        <a class="button-link">Change Difficulty</a>
+        </div>
+        <!-- Sudoku board section -->
+        <div class="board">
+            <div class="boxLevel1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="boxLevel1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="boxLevel1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="boxLevel1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="boxLevel1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="boxLevel1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="boxLevel1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="boxLevel1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="boxLevel1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
