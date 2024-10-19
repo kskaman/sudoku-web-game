@@ -1,0 +1,77 @@
+<!-- src/pages/solve-puzzle.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solve Sudoku Puzzle</title>
+  <link rel="stylesheet" href="../css/puzzle-page.css">
+  <link rel="stylesheet" href="../css/board.css">
+  <link rel="stylesheet" href="../css/buttons.css">
+  <link rel="stylesheet" href="../css/modal.css">
+</head>
+<body>
+  <!-- Difficulty Modal -->
+  <div class="modal" id="difficulty-modal">
+    <div class="modal-content">
+      <h2>Select Difficulty Level</h2>
+      <div class="difficulty-buttons">
+        <button class="button-link" data-difficulty="easy">Easy</button>
+        <button class="button-link" data-difficulty="medium">Medium</button>
+        <button class="button-link" data-difficulty="hard">Hard</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Change Difficulty Modal -->
+  <div class="modal" id="change-difficulty-modal">
+    <div class="modal-content">
+      <h2>Select Difficulty Level</h2>
+      <div class="difficulty-buttons">
+        <button class="button-link" data-difficulty="easy">Easy</button>
+        <button class="button-link" data-difficulty="medium">Medium</button>
+        <button class="button-link" data-difficulty="hard">Hard</button>
+      </div>
+      <p>OR</p>
+      <div class="modal-footer">
+        <a class="button-link" id="resume-puzzle">Resume Current Puzzle</a>
+        <a class="button-link" href="../../index.html">Go to Home</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Congratulation Modal -->
+  <div class="modal" id="congratulation-modal">
+    <div class="modal-content">
+      <h2>Congratulations!</h2>
+      <p>You have successfully completed the Sudoku puzzle!</p>
+      <div class="modal-footer">
+        <a class="button-link" id="play-again-button">Play Again</a>
+        <a class="button-link" href="../../index.html">Home</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar section -->
+  <aside class="sidebar">
+    <a href="../../index.html" class="button-link">Home</a>
+    <h2>Instructions</h2>
+    <div>
+      <p>1. Some boxes are pre-filled. Fill in the empty boxes with the correct numbers.</p>
+      <p>2. If you enter the right number, the background and the number will turn green.</p>
+      <p>3. If the number is wrong, the background and the number will turn red.</p>
+    </div>
+  </aside>
+
+  <div class="board" id="board">
+    <div id="puzzle-buttons">
+      <a class="button-link" id="reset">Reset</a>
+      <a class="button-link" id="change-difficulty-button">Change Difficulty</a>
+    </div>
+    <!-- Sudoku board will be generated here -->
+  </div>
+
+  <script src="../js/solvePuzzle.js"></script>
+</body>
+</html>
