@@ -38,7 +38,7 @@
 }
   
 /* Prefilled cell styles */
-.sudoku-cell[readonly] {
+.sudoku-cell[readonly], .prefilled {
     background-color: #ccc;
     color: white;
 }
@@ -54,4 +54,3 @@
     background-color: #f8d7da !important;
     color: #721c24 !important;
 }
-  
