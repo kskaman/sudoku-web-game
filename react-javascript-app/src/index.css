@@ -1,0 +1,9 @@
+/* Reset margins and paddings */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}

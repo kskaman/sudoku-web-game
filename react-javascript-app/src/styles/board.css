@@ -1,0 +1,57 @@
+/* board.css */
+
+/* Board Container */
+.board-container {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: 2px;
+  width: 90vw;
+  max-width: 600px;
+  height: 90vw;
+  max-height: 600px;
+  border: 3px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #fff;
+}
+
+/* Sudoku Cells */
+.sudoku-cell {
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+/* Prevent focus outline on readonly cells */
+.sudoku-cell[readonly]:focus {
+  outline: none !important;
+}
+
+/* Cell focus style */
+.sudoku-cell:focus {
+  border-color: #007acc;
+}
+
+/* Prefilled cell styles */
+.sudoku-cell[readonly],
+.prefilled {
+  background-color: #ccc;
+  color: white;
+}
+
+/* Correct cell styles */
+.correct {
+  background-color: #719e7b !important;
+  color: #155724 !important;
+}
+
+/* Incorrect cell styles */
+.incorrect {
+  background-color: #f8d7da !important;
+  color: #721c24 !important;
+}
