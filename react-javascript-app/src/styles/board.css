@@ -38,7 +38,6 @@
 }
 
 /* Prefilled cell styles */
-.sudoku-cell[readonly],
 .prefilled {
   background-color: #ccc;
   color: white;

@@ -7,6 +7,8 @@
   padding: 0.75em 1.25em;
   cursor: pointer;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  text-align: center;
 }
 
 .button-link:hover {
