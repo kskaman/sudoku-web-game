@@ -28,13 +28,8 @@
 }
 
 /* Prevent focus outline on readonly cells */
-.sudoku-cell[readonly]:focus {
-  outline: none !important;
-}
-
-/* Cell focus style */
 .sudoku-cell:focus {
-  border-color: #007acc;
+  outline: none !important;
 }
 
 /* Prefilled cell styles */

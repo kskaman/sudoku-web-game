@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./components/Home";
 
-import "./styles/buttons.css";
 import GenerateSolution from "./components/GenerateSolution";
 import SolvePuzzle from "./components/SolvePuzzle";
 
@@ -18,7 +17,6 @@ const App = () => {
       </Router>
     </>
   );
-  //return <Home />;
 };
 
 export default App;

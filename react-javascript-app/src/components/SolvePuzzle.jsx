@@ -1,5 +1,7 @@
 import Sidebar from "./Sidebar";
 
+import puzzleStyles from "../styles/Puzzle.module.css";
+
 const SolvePuzzle = () => {
   const instructions = [
     "Some boxes are pre-filled. Fill in the empty boxes with the correct numbers.",
@@ -8,9 +10,9 @@ const SolvePuzzle = () => {
   ];
 
   return (
-    <div className="puzzle-page-container">
+    <div className={puzzleStyles.container}>
       <Sidebar instructions={instructions}></Sidebar>
-      <main></main>
+      <div className={puzzleStyles.board}></div>
     </div>
   );
 };
