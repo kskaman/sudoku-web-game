@@ -42,8 +42,8 @@ const SolvePuzzle = () => {
 
   const [boardData, setBoardData] = useState([]);
   let solvedPuzzleRef = useRef([]);
-  const [showDifficultyModal, setShowDifficultyModal] = useState(true);
-  const [showCongratsModal, setShowCongratsModal] = useState(false);
+  const [showDifficultyModal, setShowDifficultyModal] = useState(false);
+  const [showCongratsModal, setShowCongratsModal] = useState(true);
   const [difficulty, setDifficulty] = useState(null);
 
   const handleDifficultySelect = (level) => {
@@ -157,7 +157,6 @@ const SolvePuzzle = () => {
                     text: "Resume Current Puzzle",
                     onClick: () => setShowDifficultyModal(false),
                   },
-                  { text: "Home", href: "/" },
                 ]
               : []),
           ]}
@@ -176,7 +175,12 @@ const SolvePuzzle = () => {
                 setShowDifficultyModal(true);
               },
             },
-            { text: "Home", href: "/" },
+          ]}
+          links={[
+            {
+              text: "Home",
+              to: "/",
+            },
           ]}
         />
       )}
