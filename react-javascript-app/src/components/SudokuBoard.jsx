@@ -4,7 +4,12 @@ import boardStyles from "../styles/Board.module.css";
 
 import { useRef } from "react";
 
-const SudokuBoard = ({ boardData, onCellChange, readOnly }) => {
+const SudokuBoard = ({
+  boardData,
+  onCellChange,
+  readOnly,
+  isPuzzle = false,
+}) => {
   const inputRefs = useRef(
     Array.from({ length: 9 }, () => Array.from({ length: 9 }, () => null))
   );
@@ -51,8 +56,10 @@ const SudokuBoard = ({ boardData, onCellChange, readOnly }) => {
 
           // Build a dynamic class name based on cell properties
           let cellClass = boardStyles.sudokuCell;
-          if (isUserInput) cellClass += " " + boardStyles.prefilled;
-          if (isSolverFilled) cellClass += " " + boardStyles.correct;
+          if ((!isPuzzle && isUserInput) || (isPuzzle && isSolverFilled))
+            cellClass += " " + boardStyles.prefilled;
+          if ((!isPuzzle && isSolverFilled) || (isPuzzle && isUserInput))
+            cellClass += " " + boardStyles.correct;
           if (!isValid) cellClass += " " + boardStyles.incorrect;
 
           return (
@@ -95,6 +102,7 @@ SudokuBoard.propTypes = {
   ).isRequired,
   onCellChange: PropTypes.func,
   readOnly: PropTypes.bool,
+  isPuzzle: PropTypes.bool,
 };
 
 export default SudokuBoard;
