@@ -14,7 +14,6 @@ const SudokuBoard = ({
     Array.from({ length: 9 }, () => Array.from({ length: 9 }, () => null))
   );
 
-  // Move focus when arrow keys are pressed
   const handleKeyDown = (e, row, col) => {
     let nextRow = row;
     let nextCol = col;
@@ -33,13 +32,55 @@ const SudokuBoard = ({
         nextCol = Math.min(8, col + 1);
         break;
       case "Tab":
-        break;
+        // Let default Tab behavior proceed
+        return;
       default:
         return;
     }
 
     // Prevent the default cursor movement within the input
     e.preventDefault();
+
+    // If it's a puzzle, skip over cells that are solver-filled
+    if (isPuzzle) {
+      // Determine the direction based on the key pressed
+      let dRow = 0;
+      let dCol = 0;
+
+      switch (e.key) {
+        case "ArrowUp":
+          dRow = -1;
+          break;
+        case "ArrowDown":
+          dRow = 1;
+          break;
+        case "ArrowLeft":
+          dCol = -1;
+          break;
+        case "ArrowRight":
+          dCol = 1;
+          break;
+        default:
+          break;
+      }
+
+      // Keep advancing in that direction while the cell is solver-filled
+      while (
+        nextRow >= 0 &&
+        nextRow < 9 &&
+        nextCol >= 0 &&
+        nextCol < 9 &&
+        boardData[nextRow][nextCol].isSolverFilled
+      ) {
+        nextRow += dRow;
+        nextCol += dCol;
+      }
+
+      if (nextRow > 8 || nextRow < 0 || nextCol < 0 || nextCol > 8) {
+        nextRow = row;
+        nextCol = col;
+      }
+    }
 
     // Focus the target cell
     const targetInput = inputRefs.current[nextRow][nextCol];
