@@ -22,3 +22,11 @@
   background-color: #004080;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
+
+@media (max-width: 480px) {
+  .buttonLink {
+    max-width: 280px;
+    font-size: 0.9rem;
+    padding: 0.5em 1em;
+  }
+}

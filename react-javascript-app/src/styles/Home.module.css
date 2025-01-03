@@ -1,6 +1,6 @@
 .container {
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
 }
 
 /* Header Styling */
@@ -59,4 +59,10 @@
 
 .Links {
   width: 15em;
+}
+
+@media (max-width: 480px) {
+  .headerContainer {
+    padding: 1em;
+  }
 }

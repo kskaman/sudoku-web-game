@@ -67,13 +67,25 @@
     flex-direction: column;
   }
 
-  .sidebar {
-    padding-top: 1em;
-  }
-
   .sidebar,
   .board {
     flex: none;
     width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .sidebar h2 {
+    margin-top: 2em;
+  }
+
+  .boardButtons,
+  .buttons {
+    max-width: 280px;
+  }
+
+  #puzzle-buttons {
+    flex-direction: column;
+    gap: 0.75em;
+    margin-bottom: 1em;
   }
 }

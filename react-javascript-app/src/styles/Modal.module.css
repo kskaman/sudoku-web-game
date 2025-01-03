@@ -47,9 +47,17 @@
 }
 
 .resumeButtonContainer {
-  /* Add margin above or some spacing */
   margin-top: 1em;
-  /* Add a border or horizontal line at the top */
   border-top: 2px solid #ccc;
   padding-top: 1.75em;
+}
+
+@media (max-width: 480px) {
+  .modalContent {
+    width: 90%;
+    max-width: 350px;
+    padding: 20px;
+    max-height: 80%;
+    overflow-y: auto;
+  }
 }
