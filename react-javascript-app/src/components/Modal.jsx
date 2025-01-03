@@ -15,38 +15,46 @@ function Modal({ message, buttons, onClose, links }) {
         <h2>{message}</h2>
         <div className={modalStyles.modalFooter}>
           {buttons &&
-            buttons.map((button, index) =>
-              button.href ? (
-                <a
-                  key={index}
-                  className={`${buttonStyles.buttonLink} ${modalStyles.buttonLink}`}
-                  href={button.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    if (onClose) onClose();
-                  }}
-                >
-                  {button.text}
-                </a>
-              ) : (
-                <button
-                  key={index}
-                  className={`${buttonStyles.buttonLink} ${modalStyles.buttonLink}`}
-                  onClick={() => {
-                    button.onClick();
-                    if (onClose) onClose();
-                  }}
-                >
-                  {button.text}
-                </button>
-              )
-            )}
+            buttons.map((button, index) => {
+              if (button.text === "Resume Current Puzzle") {
+                return (
+                  <div
+                    key={index}
+                    className={modalStyles.resumeButtonContainer}
+                  >
+                    <button
+                      className={`${buttonStyles.buttonLink} ${modalStyles.buttons}`}
+                      onClick={() => {
+                        button.onClick();
+                        if (onClose) onClose();
+                      }}
+                    >
+                      {button.text}
+                    </button>
+                  </div>
+                );
+              } else {
+                return (
+                  <button
+                    key={index}
+                    className={`${buttonStyles.buttonLink} ${modalStyles.buttons}`}
+                    onClick={() => {
+                      button.onClick();
+                      if (onClose) onClose();
+                    }}
+                  >
+                    {button.text}
+                  </button>
+                );
+              }
+            })}
+
           {links &&
             links.map((link) => (
               <Link
                 key={link.text}
                 to={link.to}
-                className={`${buttonStyles.buttonLink} ${modalStyles.buttonLink}`}
+                className={`${buttonStyles.buttonLink} ${modalStyles.Links}`}
               >
                 {link.text}
               </Link>

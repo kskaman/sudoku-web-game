@@ -138,7 +138,7 @@ const GenerateSolution = () => {
           readOnly={isSolved}
         />
         <button
-          className={`${buttonStyles.buttonLink} ${puzzleStyles.buttonLink}`}
+          className={`${buttonStyles.buttonLink} ${puzzleStyles.buttons}`}
           onClick={isSolved ? handleReset : handleSubmit}
         >
           {isSolved ? "Reset" : "Submit"}

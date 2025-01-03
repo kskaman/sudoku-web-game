@@ -38,6 +38,18 @@
   width: 100%;
 }
 
-.buttonLink {
-  width: 14em !important;
+.buttons {
+  width: 14em;
+}
+
+.Links {
+  width: 11.5em;
+}
+
+.resumeButtonContainer {
+  /* Add margin above or some spacing */
+  margin-top: 1em;
+  /* Add a border or horizontal line at the top */
+  border-top: 2px solid #ccc;
+  padding-top: 1.75em;
 }

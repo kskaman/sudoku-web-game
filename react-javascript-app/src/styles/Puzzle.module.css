@@ -53,8 +53,12 @@
   gap: 2em;
 }
 
-.buttonRow .buttonLink {
+.boardButtons {
   width: 11em;
+}
+
+.buttons {
+  width: 9em;
 }
 
 /* Responsive adjustments */

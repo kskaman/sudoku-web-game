@@ -20,14 +20,14 @@ const Home = () => {
           <div className={homeStyles.options}>
             <Link
               to="/generate-solution"
-              className={`${buttonStyles.buttonLink} ${homeStyles.buttonLink}`}
+              className={`${buttonStyles.buttonLink} ${homeStyles.Links}`}
             >
               Generate a Sudoku Solution
             </Link>
 
             <Link
               to="/solve-puzzle"
-              className={`${buttonStyles.buttonLink} ${homeStyles.buttonLink}`}
+              className={`${buttonStyles.buttonLink} ${homeStyles.Links}`}
             >
               Solve a Sudoku Puzzle
             </Link>

@@ -42,8 +42,8 @@ const SolvePuzzle = () => {
 
   const [boardData, setBoardData] = useState([]);
   let solvedPuzzleRef = useRef([]);
-  const [showDifficultyModal, setShowDifficultyModal] = useState(false);
-  const [showCongratsModal, setShowCongratsModal] = useState(true);
+  const [showDifficultyModal, setShowDifficultyModal] = useState(true);
+  const [showCongratsModal, setShowCongratsModal] = useState(false);
   const [difficulty, setDifficulty] = useState(null);
 
   const handleDifficultySelect = (level) => {
@@ -61,10 +61,6 @@ const SolvePuzzle = () => {
     if (newValue === "" || /^[1-9]$/.test(newValue)) {
       setBoardData((prevBoard) => {
         const updatedBoard = prevBoard.map((r, rIdx) => {
-          // console.log("solved puzzle : ", solvedPuzzle);
-          // console.log("row : ", row);
-          // console.log("col", col);
-
           return r.map((cell, cIdx) => {
             if (rIdx === row && cIdx === col) {
               const newCell = {
@@ -119,13 +115,13 @@ const SolvePuzzle = () => {
       <div className={puzzleStyles.board}>
         <div className={puzzleStyles.buttonRow}>
           <button
-            className={`${buttonStyles.buttonLink} ${puzzleStyles.buttonLink}`}
+            className={`${buttonStyles.buttonLink} ${puzzleStyles.boardButtons}`}
             onClick={handleReset}
           >
             Reset
           </button>
           <button
-            className={`${buttonStyles.buttonLink} ${puzzleStyles.buttonLink}`}
+            className={`${buttonStyles.buttonLink} ${puzzleStyles.boardButtons}`}
             onClick={() => setShowDifficultyModal(true)}
           >
             Change Difficulty

@@ -9,7 +9,7 @@ const Sidebar = ({ instructions }) => {
     <aside className={puzzleStyles.sidebar}>
       <Link
         to="/"
-        className={`${buttonStyles.buttonLink} ${puzzleStyles.buttonLink}`}
+        className={`${buttonStyles.buttonLink} ${puzzleStyles.buttons}`}
       >
         Home
       </Link>
