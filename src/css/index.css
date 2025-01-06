@@ -1,5 +1,3 @@
-/* src/css/index.css */
-
 /* Reset margins and paddings */
 body,
 html {
@@ -75,9 +73,6 @@ html {
 }
 
 @media (max-width: 480px) {
-  .container {
-    flex-direction: row;
-  }
   .headerContainer {
     padding: 1em;
   }
