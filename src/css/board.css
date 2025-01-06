@@ -50,3 +50,14 @@
   background-color: #f8d7da !important;
   color: #721c24 !important;
 }
+
+@media (max-width: 480px) {
+  .sudokuCell {
+    font-size: 1.2rem; /* or even 1rem if needed */
+  }
+
+  .boardContainer {
+    border: 2px solid #ccc;
+    padding: 3px;
+  }
+}

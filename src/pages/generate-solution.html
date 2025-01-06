@@ -2,44 +2,52 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Generate Solution</title>
-  <link rel="stylesheet" href="../css/puzzle-page.css">
-  <link rel="stylesheet" href="../css/board.css">
-  <link rel="stylesheet" href="../css/buttons.css">
-  <link rel="stylesheet" href="../css/modal.css">
-</head>
-<body>
-  <!-- Sidebar section -->
-  <aside class="sidebar">
-    <a href="../../index.html" class="button-link">Home</a>
-    <h2>Instructions</h2>
-    <div>
-      <p>1. Fill in the Sudoku board with your puzzle.</p>
-      <p>2. Click the Submit button to generate the solution.</p>
-      <p>3. Make sure to fill in all necessary cells for accurate results.</p>
-    </div>
-  </aside>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate Solution</title>
+    <link rel="stylesheet" href="../css/puzzle-page.css" />
+    <link rel="stylesheet" href="../css/board.css" />
+    <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+  </head>
+  <body>
+    <main class="container">
+      <!-- Sidebar section -->
+      <aside class="sidebar">
+        <a href="../../index.html" class="button-link">Home</a>
+        <h2>Instructions</h2>
+        <div>
+          <p>1. Fill in the Sudoku board with your puzzle.</p>
+          <p>2. Click the Submit button to generate the solution.</p>
+          <p>
+            3. Make sure to fill in all necessary cells for accurate results.
+          </p>
+          <p>
+            4. Enter a valid puzzle. If the puzzle entries are invalid, they
+            will be highlighted red. A Valid sudoku contains
+            <strong>no same number in a row , column or sub-grid</strong>.
+          </p>
+        </div>
+      </aside>
 
-  <div class="board" id="board">
-    <!-- Sudoku board will be generated here -->
-    <button class="button-link" id="submit-button">Submit</button>
-  </div>
-
-  <!-- Modal Structure -->
-  <div class="modal" id="tryAgain-modal">
-    <div class="modal-content">
-      <h4>Oops!</h4>
-      <p id="modal-message"></p>
-      <div class="modal-footer">
-        <a class="button-link" id="tryAgain-button">Try Again</a>
-        <a class="button-link" href="../../index.html">Home</a>
+      <div class="board" id="board">
+        <!-- Sudoku board will be generated here -->
+        <button class="button-link" id="submit-button">Submit</button>
       </div>
-    </div>
-  </div>
 
-  <script src="../js/generateSolution.js"></script>
-</body>
+      <!-- Modal Structure -->
+      <div class="modal" id="tryAgain-modal">
+        <div class="modal-content">
+          <h4>Oops!</h4>
+          <p id="modal-message"></p>
+          <div class="modal-footer">
+            <a class="button-link" id="tryAgain-button">Try Again</a>
+            <a class="button-link" href="../../index.html">Home</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/generateSolution.js"></script>
+  </body>
 </html>
